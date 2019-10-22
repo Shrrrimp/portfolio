@@ -1,5 +1,5 @@
 body{
-    max-width: 1024px;
+    max-width: 1150px;
     margin: 0 auto;
     font-family: "Montserrat";
     background-color: #bca9c0;
@@ -39,42 +39,20 @@ header h1{
     width: 250px; 
 }
 
-/* .menu{
-    background-color: #663399;
-    padding: 20px 0;
-    box-shadow: 0px 12px 42px 7px rgba(156,134,160,1);
-}
-
-.menu ul{
-    display: flex;
-    justify-content: space-around;
-}
-
-.menu a{
-    color: #fff;
-}
-
-.menu a:hover{
-    color: #000;
-} */
-
-main{
+.main{
+    position: relative;
     background-color: #fff;
-    padding: 40px 63px 0 63px;
+    padding: 40px 0;
     box-shadow: 0px 12px 42px 7px rgba(156,134,160,1);
 }
 
-main div{
-    padding-bottom: 40px;
-}
-
-main h2{
+.main h2{
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-main ul{
+.main ul{
     list-style-type: disc;
 }
 
@@ -88,17 +66,27 @@ main ul{
     margin: 0 20px;
 }
 
+#accordion {
+  margin: 0 60px;
+}
+
 .my_carousel {
     position: relative;
 }
 
 .carousel {
     position: absolute;
-    top: 50%;
+    top: 275px;
     left: 50%;
     width: 100%;
     text-align: center;
     transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+.carousel li {
+  font-size: 18px;
+  text-align: left;
 }
 
 .items-container {
@@ -125,94 +113,104 @@ main ul{
     width: 100%;
   }
   
-  .description {
+.description {
     margin: 30px 20%;
     font-size: 32px;
     border: 2px solid black;
     display: flex;
     justify-content: space-between;
-  }
+}
   
-  .project-name {
+.project-name {
     padding: 10px;
-  }
+}
   
-  .control {
+.control {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 15%;
     cursor: pointer;
-  }
+}
   
-  .control.left {
+.control.left {
     left: 0;
     right: auto;
-  }
+}
   
-  .control.right {
+.control.right {
     right: 0;
     left: auto;
-  }
+}
   
-  .arrow {
+.arrow {
     display: inline-block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 84px;
-  }
+}
   
-  .arrow.right {
+.arrow.right {
     right: 50%;
-  }
+}
   
-  .to-left {
+.to-left {
     animation-name: left;
-  }
+}
   
-  .from-right {
+.from-right {
     animation-name: right;
-  }
+}
   
-  .to-right {
+.to-right {
     animation-name: right;
     animation-direction: reverse;
-  }
+}
   
-  .from-left {
+.from-left {
     animation-name: left;
     animation-direction: reverse;
-  }
+}
   
-  @keyframes left {
+@keyframes left {
     from {
       left: 0;
     }
     to {
       left: -100%;
     }
-  }
+}
   
-  @keyframes right {
+@keyframes right {
     from {
       left: 100%;
     }
     to {
       left: 0;
     }
-  }
+}
   
-  @media (max-width: 960px) {
+@media (max-width: 960px) {
     .description {
       flex-direction: column;
       align-items: center;
     }
-  }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+      top: 371px;
+    }
+}
   
   @media (max-width: 640px) {
     .control > .arrow {
       display: none;
+    }
+
+    .carousel {
+      top: 275px;
     }
   
     .project-name {
@@ -222,4 +220,4 @@ main ul{
     .description {
       border: 0;
     }
-  }
+}
